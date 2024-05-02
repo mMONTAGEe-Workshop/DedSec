@@ -7,4 +7,4 @@ Code is heavily based on Ebola Man YT work.
 
 To Run the program do the following
 
-Open Visual Studio 2022 -> Create a new project -> Console App (.NET Framework) ! -> Cope paste the code from "Internet Protocol/ip-geolocate/ip-geolocate/Program.cs" -> Press Run.
+Open Visual Studio 2022 -> Create a new project -> Console App (.NET Framework) ! -> Copy paste the code from "Internet Protocol/ip-geolocate/ip-geolocate/Program.cs" -> Press Run.
