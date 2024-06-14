@@ -1,0 +1,2 @@
+**Description**:
+As starters in the cybersecurity space, the position of junior SOC analyst is perfect to get to learn the basics of cybersecurity. This position briefly talks about the necessity to monitor and check systems for potential incoming attacks, we will learn the basics of SOC analyst and the fundamental knowledge to be able to acquire a position in that field.
