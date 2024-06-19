@@ -35,3 +35,55 @@ Domain Names can be a little more of a pain for the attacker to change as they w
 
 ![img](https://tryhackme-images.s3.amazonaws.com/user-uploads/60c7fac321aca20049602d2b/room-content/efcc44de8368a8cc7d99148f560ae2fd.png)
 
+Comparison between Compromised and Legitimite Links of _Adidas_ website in this example
+
+![img](https://tryhackme-images.s3.amazonaws.com/user-uploads/60c7fac321aca20049602d2b/room-content/03ad636820590525bdd91e28a04bbec1.png)
+
+![img](https://tryhackme-images.s3.amazonaws.com/user-uploads/60c7fac321aca20049602d2b/room-content/7c4329f6d1d09a739097f818dc42e733.png)
+
+This is one of the examples of a Punycode attack used by the attackers to redirect users to a malicious domain that seems legitimate at first glance.
+
+What is Punycode? As per Wandera, "Punycode is a way of converting words that cannot be written in ASCII, into a Unicode ASCII encoding."
+
+What you saw in the URL above is adıdas.de which has the Punycode of http://xn--addas-o4a.de/
+Internet Explorer, Google Chrome, Microsoft Edge, and Apple Safari are now pretty good at translating the obfuscated characters into the full Punycode domain name.
+
+To detect the malicious domains, proxy logs or web server logs can be used.
+
+Attackers usually hide the malicious domains under URL Shorteners. A URL Shortener is a tool that creates a short and unique URL that will redirect to the specific website specified during the initial step of setting up the URL Shortener link. According to Cofense, attackers use the following URL Shortening services to generate malicious links: 
+
+- bit.ly
+- goo.gl
+- ow.ly
+- s.id
+- smarturl.it
+- tiny.pl
+- tinyurl.com
+- x.co
+
+You can see the actual website the shortened link is redirecting you to by appending "+" to it (see the examples below). Type the shortened URL in the address bar of the web browser and add the above characters to see the redirect URL. 
+
+![img](https://tryhackme-images.s3.amazonaws.com/user-uploads/5c549500924ec576f953d9fc/room-content/78481d27921134df9daab358a42ff5d0.png)
+
+Viewing Connections in Any.run:
+
+Because Any.run is a sandboxing service that executes the sample, we can review any connections such as HTTP requests, DNS requests or processes communicating with an IP address. To do so, we can look at the "networking" tab located just below the snapshot of the machine.
+
+HTTP Requests:
+
+This tab shows the recorded HTTP requests since the detonation of the sample. This can be useful to see what resources are being retrieved from a webserver, such as a dropper or a callback.
+
+![img](https://assets.tryhackme.com/additional/pyramidofpain/t4/http%20requests.png)
+
+Connections:
+
+This tab shows any communications made since the detonation of the sample. This can be useful to see if a process communicates with another host. For example, this could be C2 traffic, uploading/downloading files over FTP, etc.
+
+![img](https://assets.tryhackme.com/additional/pyramidofpain/t4/connections.png)
+
+DNS Requests:
+
+This tab shows the DNS requests made since the detonation of the sample. Malware often makes DNS requests to check for internet connectivity (I.e. if It can't reach the internet/call home, then it's probably being sandboxed or is useless). 
+
+![img](https://assets.tryhackme.com/additional/pyramidofpain/t4/dnsrequests.png)
+
